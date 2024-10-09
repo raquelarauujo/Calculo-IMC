@@ -8,11 +8,11 @@ const IMC = () => {
   const handleSubmit = (event) => {
     event.preventDefault();
 
-    // Converter para números
+    
     const alturaNum = Number(Altura);
     const pesoNum = Number(Peso);
 
-    // Calcular IMC apenas se os valores forem válidos
+
     if (alturaNum > 0 && pesoNum > 0) {
       const imcCalculado = pesoNum / (alturaNum * alturaNum);
       alert('Seu IMC é: ' + imcCalculado.toFixed(2));
@@ -33,7 +33,7 @@ const IMC = () => {
         alert('Gordo');
       }
     } else {
-      alert("Por favor, insira valores válidos para altura e peso.");
+      alert("Insira valores válidos para altura e peso.");
     }
 
     console.log("Dados do usuário:", { Altura, Peso });
@@ -49,7 +49,7 @@ const IMC = () => {
             placeholder="Altura (m)"
             required
             value={Altura}
-            onChange={(e) => setAltura(e.target.value)} // Manter como string
+            onChange={(e) => setAltura(e.target.value)} 
           />
         </div>
         <div className="input-field">
@@ -58,7 +58,7 @@ const IMC = () => {
             placeholder="Peso (kg)"
             required
             value={Peso}
-            onChange={(e) => setPeso(e.target.value)} // Manter como string
+            onChange={(e) => setPeso(e.target.value)} 
           />
         </div>
         <button type="submit">Calcular</button>
